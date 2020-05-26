@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: binhnguyen
-  Date: 5/26/20
-  Time: 11:54 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Update Product</title>
+    <title>View All</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -27,41 +21,15 @@
     <link rel="stylesheet" href="boostrap/css/bootstrap.css">
     <link rel="stylesheet" href="boostrap/css/mainStyle.css">
 </head>
-
 <body>
 <form method="post">
     <table class="table table-hover">
         <tr>
-            <td colspan="6">Update Product</td>
+            <td colspan="2">Seach Product</td>
         </tr>
         <tr>
-            <td>
-                ProductName
-            </td>
-            <td>
-                ProductPrice
-            </td>
-            <td>
-                ProductQuantity
-            </td>
-            <td>ProductColor</td>
-            <td>
-                ProductDesctiption
-            </td>
-            <td>
-                ProductCategoryID
-            </td>
-        </tr>
-        <tr>
-            <td><input type="text" name="productName" size="20" value="${requestScope["product"].getProductName()}"></td>
-            <td><input type="text" name="productPrice" size="20" value="${requestScope["product"].getProductPrice()}"></td>
-            <td><input type="text" name="productQuantity" size="20" value="${requestScope["product"].getProductQuantity()}"></td>
-            <td><input type="text" name="productColor" size="20" value="${requestScope["product"].getProductColor()}"></td>
-            <td><input type="text" name="productDescription" size="20" value="${requestScope["product"].getProductDescription()}"></td>
-            <td><input type="text" name="productCategoryId" size="20" value="${requestScope["product"].getProductCategoryId()}"></td>
-        </tr>
-        <tr>
-            <td colspan="6"><input type="submit" value="Update"></td>
+            <td><input type="text" name="searchValue"></td>
+            <td><input type="submit" value="Search"></td>
         </tr>
     </table>
 </form>

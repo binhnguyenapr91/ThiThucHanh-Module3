@@ -29,11 +29,13 @@
     <link rel="stylesheet" href="boostrap/css/mainStyle.css">
 </head>
 <body>
-
 <form action="/productServlet" method="post">
     <table class="table table-hover">
         <tr>
             <td colspan="9"><a href="/productServlet?action=add">Create New Product</a></td>
+        </tr>
+        <tr>
+            <td colspan="9"><a href="/productServlet?action=search">Search Product</a></td>
         </tr>
         <tr>
             <td>

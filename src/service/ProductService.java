@@ -9,5 +9,5 @@ public interface ProductService {
     public void updateProductById(int id, Product product);
     public void deleteProductById(int id);
     public void addProduct(Product product);
-
+    public Product getProductById(int id);
 }

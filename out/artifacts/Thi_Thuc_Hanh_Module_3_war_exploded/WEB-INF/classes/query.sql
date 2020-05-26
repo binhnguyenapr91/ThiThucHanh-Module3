@@ -41,3 +41,5 @@ insert into products (productName, productPrice,productQuantity,productColor,pro
 values('Iphone 11',50000000,20,'Red,Blue,Silver','OS 13; high performance, camera very good','1');
 insert into products (productName, productPrice,productQuantity,productColor,productDescription,productCategoryId)
 values('Iphone 11',50000000,20,'Red,Green,Silver','OS 13; high performance, camera very good','1');
+
+

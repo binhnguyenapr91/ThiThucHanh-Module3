@@ -1,8 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: binhnguyen
   Date: 5/26/20
-  Time: 11:54 AM
+  Time: 1:04 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Update Product</title>
+    <title>Result Search</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -29,10 +30,9 @@
 </head>
 
 <body>
-<form method="post">
     <table class="table table-hover">
         <tr>
-            <td colspan="6">Update Product</td>
+            <td colspan="6">View Product</td>
         </tr>
         <tr>
             <td>
@@ -52,18 +52,17 @@
                 ProductCategoryID
             </td>
         </tr>
-        <tr>
-            <td><input type="text" name="productName" size="20" value="${requestScope["product"].getProductName()}"></td>
-            <td><input type="text" name="productPrice" size="20" value="${requestScope["product"].getProductPrice()}"></td>
-            <td><input type="text" name="productQuantity" size="20" value="${requestScope["product"].getProductQuantity()}"></td>
-            <td><input type="text" name="productColor" size="20" value="${requestScope["product"].getProductColor()}"></td>
-            <td><input type="text" name="productDescription" size="20" value="${requestScope["product"].getProductDescription()}"></td>
-            <td><input type="text" name="productCategoryId" size="20" value="${requestScope["product"].getProductCategoryId()}"></td>
-        </tr>
-        <tr>
-            <td colspan="6"><input type="submit" value="Update"></td>
-        </tr>
+        <c:forEach items="${products}" var="product">
+            <tr>
+                <td><input type="text" name="productName" size="20" value="${product.getProductName()}"></td>
+                <td><input type="text" name="productPrice" size="20" value="${product.getProductPrice()}"></td>
+                <td><input type="text" name="productQuantity" size="20" value="${product.getProductQuantity()}"></td>
+                <td><input type="text" name="productColor" size="20" value="${product.getProductColor()}"></td>
+                <td><input type="text" name="productDescription" size="20" value="${product.getProductDescription()}"></td>
+                <td><input type="text" name="productCategoryId" size="20" value="${product.getProductCategoryId()}"></td>
+            </tr>
+        </c:forEach>
+
     </table>
-</form>
 </body>
 </html>
